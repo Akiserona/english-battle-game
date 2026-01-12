@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Defense Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Header: Score and Prompt -->
+        <div id="ui-header">
+            <div id="score-board">Score: <span id="score">0</span></div>
+            <div id="question-box">
+                <h2 id="jp-prompt">ゲーム開始を待っています...</h2>
+                <div id="en-answer-display"></div>
+            </div>
+        </div>
 
+        <!-- The Game View -->
+        <canvas id="game-canvas" width="800" height="400"></canvas>
+
+        <!-- Footer: Controls/Buttons -->
+        <div id="ui-footer">
+            <div id="word-buttons-container"></div>
+        </div>
+
+        <!-- Overlays -->
+        <div id="game-over-overlay" class="hidden">
+            <h1>GAME OVER</h1>
+            <p>Final Score: <span id="final-score">0</span></p>
+            <button id="restart-btn">Try Again</button>
+        </div>
+
+        <div id="start-overlay">
+            <h1>English Defense</h1>
+            <p>迫りくる敵を英語で撃退せよ！</p>
+            <button id="start-btn">Game Start</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
